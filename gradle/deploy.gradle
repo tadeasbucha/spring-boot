@@ -17,7 +17,7 @@ heroku {
     includeBuildDir = false
 
     processTypes(
-        web: "java \$JAVA_OPTS -jar $buildDir.name/libs/$war.archiveName --server.port=\$PORT".toString()
+        web: "java \$JAVA_OPTS -jar $buildDir.name/libs/$war.archiveName --server.port=80".toString()
     )
 }
 
