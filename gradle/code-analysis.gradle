@@ -5,7 +5,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.5'
+        classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.8'
     }
 }
 
@@ -16,6 +16,6 @@ sonarqube {
         property 'sonar.host.url', 'https://sonarcloud.io'
         property 'sonar.organization', 'tbu-jenkins'
         property 'sonar.login', System.getenv('SONAR_LOGIN')
-        properties['sonar.tests'] += sourceSets.integrationTest.java.srcDirs
+        properties['sonar.tests'] += sourceSets.integrationTest.java.srcDirs + "/test
     }
 }
