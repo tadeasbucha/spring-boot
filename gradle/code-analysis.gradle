@@ -16,6 +16,8 @@ sonarqube {
         property 'sonar.host.url', 'https://sonarcloud.io'
         property 'sonar.organization', 'tbu-jenkins'
         property 'sonar.login', System.getenv('SONAR_LOGIN')
+        property 'sonar.projectName', 'SpringBoot'
+        property 'sonar.projectKey', 'tbu-jenkins-sonarcloud-analysis'
         properties['sonar.tests'] += sourceSets.integrationTest.java.srcDirs + "test"
     }
 }
