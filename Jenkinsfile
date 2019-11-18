@@ -38,7 +38,7 @@ pipeline {
                 }
                 stage('Code Analysis') {
                     steps {
-                        gradlew('sonarqube')
+                        gradlew('sonarqube --debug')
                     }
                 }
             }
